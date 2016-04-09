@@ -16,7 +16,7 @@ public class BlackjackTest {
     public void scoreTest() {
         Card card = new Card(3, Card.Suit.HEARTS, Card.Value.THREE);
         Card secretCard = new Card(10, Card.Suit.HEARTS, Card.Value.TEN);
-        Hand hand = new Hand(secretCard,card);
+        BlackjackHand hand = new BlackjackHand(secretCard,card);
 
 
 
@@ -27,11 +27,11 @@ public class BlackjackTest {
     public void dealerWinsWhenScoreIsHigherAndNotBust() {
         Card playerCard = new Card(3, Card.Suit.HEARTS, Card.Value.THREE);
         Card playerSecretCard = new Card(10, Card.Suit.HEARTS, Card.Value.TEN);
-        Hand playerHand = new Hand(playerSecretCard,playerCard);
+        BlackjackHand playerHand = new BlackjackHand(playerSecretCard,playerCard);
 
         Card dealerCard = new Card(5, Card.Suit.HEARTS, Card.Value.FIVE);
         Card dealerSecretCard = new Card(9, Card.Suit.HEARTS, Card.Value.NINE);
-        Hand dealerHand = new Hand(dealerSecretCard,dealerCard);
+        BlackjackHand dealerHand = new BlackjackHand(dealerSecretCard,dealerCard);
 
         assertThat("Dealer Wins",winningHand(playerHand,dealerHand),is(dealerHand));
 
@@ -41,11 +41,11 @@ public class BlackjackTest {
     public void playerWinsWhenScoreIsHigherAndNotBust() {
         Card playerCard = new Card(5, Card.Suit.HEARTS, Card.Value.FIVE);
         Card playerSecretCard = new Card(9, Card.Suit.HEARTS, Card.Value.NINE);
-        Hand playerHand = new Hand(playerSecretCard,playerCard);
+        BlackjackHand playerHand = new BlackjackHand(playerSecretCard,playerCard);
 
         Card dealerCard = new Card(3, Card.Suit.HEARTS, Card.Value.THREE);
         Card dealerSecretCard = new Card(10, Card.Suit.HEARTS, Card.Value.TEN);
-        Hand dealerHand = new Hand(dealerSecretCard,dealerCard);
+        BlackjackHand dealerHand = new BlackjackHand(dealerSecretCard,dealerCard);
 
         assertThat("Player Wins",winningHand(playerHand,dealerHand),is(playerHand));
     }
@@ -53,11 +53,11 @@ public class BlackjackTest {
     public void playerWinsWhenScoreIsHigherAndDealerBust() {
         Card playerCard = new Card(5, Card.Suit.HEARTS, Card.Value.FIVE);
         Card playerSecretCard = new Card(9, Card.Suit.HEARTS, Card.Value.NINE);
-        Hand playerHand = new Hand(playerSecretCard,playerCard);
+        BlackjackHand playerHand = new BlackjackHand(playerSecretCard,playerCard);
 
         Card dealerCard = new Card(3, Card.Suit.HEARTS, Card.Value.THREE);
         Card dealerSecretCard = new Card(10, Card.Suit.HEARTS, Card.Value.TEN);
-        Hand dealerHand = new Hand(dealerSecretCard,dealerCard);
+        BlackjackHand dealerHand = new BlackjackHand(dealerSecretCard,dealerCard);
         Card dealerPublicCard = new Card(10, Card.Suit.CLUBS,Card.Value.TEN);
         dealerHand.dealCard(dealerPublicCard);
 

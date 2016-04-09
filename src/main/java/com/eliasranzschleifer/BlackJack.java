@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class BlackJack {
     Deck deck = new Deck();
     public BlackJack() {
-        Hand playerHand = buildHand();
-        Hand dealerHand = buildHand();
+        BlackjackHand playerHand = buildHand();
+        BlackjackHand dealerHand = buildHand();
 
         Scanner input = new Scanner(System.in);
         String playChoice = null;
@@ -60,10 +60,10 @@ public class BlackJack {
         System.out.println(winningMessage);
 
     }
-    public Hand buildHand() {
+    public BlackjackHand buildHand() {
         Card secretCard = deck.dealCard();
         Card publicCard = deck.dealCard();
-        Hand hand = new Hand(secretCard,publicCard);
+        BlackjackHand hand = new BlackjackHand(secretCard,publicCard);
 
         return hand;
     }
@@ -87,12 +87,12 @@ public class BlackJack {
         }
     }
 
-    protected static Hand winningHand(Hand playerHand,Hand dealerHand) {
+    protected static BlackjackHand winningHand(BlackjackHand playerHand,BlackjackHand dealerHand) {
         int playerScore = playerHand.score(true);
         int dealerScore = dealerHand.score(true);
         boolean playerIsBust = playerHand.isBust();
         boolean dealerIsBust = dealerHand.isBust();
-        Hand winningHand = dealerHand;
+        BlackjackHand winningHand = dealerHand;
         if(playerScore > dealerScore && !playerIsBust && !dealerIsBust) {
             winningHand = playerHand;
         } else if(playerScore > dealerScore && !playerIsBust) {
@@ -102,4 +102,6 @@ public class BlackJack {
         }
         return winningHand;
     }
+
+
 }

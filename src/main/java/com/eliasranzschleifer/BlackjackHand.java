@@ -4,11 +4,11 @@ import java.util.List;
 /**
 * Created by ddceliasr on 4/8/16.
 */
-public class Hand {
+public class BlackjackHand {
     private final Card secretCard;
     private final List<Card> publicCards;
 
-    public Hand(Card secretCard, Card publicCard) {
+    public BlackjackHand(Card secretCard, Card publicCard) {
         this.secretCard = secretCard;
         this.publicCards = new ArrayList<>();
         dealCard(publicCard);
@@ -54,7 +54,7 @@ public class Hand {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Hand hand = (Hand) o;
+        BlackjackHand hand = (BlackjackHand) o;
 
         if (secretCard != null ? !secretCard.equals(hand.secretCard) : hand.secretCard != null) return false;
         return publicCards != null ? publicCards.equals(hand.publicCards) : hand.publicCards == null;
