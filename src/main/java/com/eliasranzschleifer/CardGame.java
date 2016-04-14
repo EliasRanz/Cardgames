@@ -4,15 +4,27 @@ import java.util.Scanner;
 
 public class CardGame {
     public static void main(String[] args) {
+        // GUI gui = new GUI(300,200);
         Scanner input = new Scanner(System.in);
         String gameChoice = null;
+
 
         System.out.println("What game would you like to play?\nBlackjack (b) ");
         gameChoice = input.nextLine();
 
-        if(gameChoice.equals("b")) {
-            BlackJack blackjack = new BlackJack();
+        Game game;
+        switch (gameChoice){
+            case "b":
+                game = new BlackJack();
+                System.out.println("You chose blackjack!");
+                break;
+            default:
+                game = new BlackJack();
+                System.out.println("You entered an invalid game. You're playing blackjack!");
         }
+
+        game.play();
+        System.out.println(game);
     }
 }
 

@@ -5,12 +5,18 @@ import java.util.Scanner;
 /**
 * Created by ddceliasr on 4/8/16.
 */
-public class BlackJack {
-    Deck deck = new Deck();
-    public BlackJack() {
-        BlackjackHand playerHand = buildHand();
-        BlackjackHand dealerHand = buildHand();
+public class BlackJack implements Game {
+    Deck deck;
+    BlackjackHand playerHand;
+    BlackjackHand dealerHand;
 
+    public BlackJack() {
+        deck = new Deck();
+        playerHand = buildHand();
+        dealerHand = buildHand();
+    }
+
+    public void play() {
         Scanner input = new Scanner(System.in);
         String playChoice = null;
         Card dealtCard;
@@ -58,8 +64,8 @@ public class BlackJack {
         }
         String winningMessage = String.format("The Dealer's score is %s, and your score is %s. You %s.", dealerScore, playerHand.score(true), winningHand(playerHand,dealerHand).equals(playerHand) ? "win" : "lose");
         System.out.println(winningMessage);
-
     }
+
     public BlackjackHand buildHand() {
         Card secretCard = deck.dealCard();
         Card publicCard = deck.dealCard();

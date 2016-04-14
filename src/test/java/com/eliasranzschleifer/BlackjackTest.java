@@ -8,9 +8,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by ddceliasr on 3/31/16.
- */
 public class BlackjackTest {
     @Test
     public void scoreTest() {
@@ -50,7 +47,7 @@ public class BlackjackTest {
         assertThat("Player Wins",winningHand(playerHand,dealerHand),is(playerHand));
     }
     @Test
-    public void playerWinsWhenScoreIsHigherAndDealerBust() {
+    public void playerWinsWhenScoreIsLowerAndDealearIsBust() {
         Card playerCard = new Card(5, Card.Suit.HEARTS, Card.Value.FIVE);
         Card playerSecretCard = new Card(9, Card.Suit.HEARTS, Card.Value.NINE);
         BlackjackHand playerHand = new BlackjackHand(playerSecretCard,playerCard);
@@ -63,4 +60,19 @@ public class BlackjackTest {
 
         assertThat("Player Wins",winningHand(playerHand,dealerHand),is(playerHand));
     }
+
+    @Test
+    public void playerLosesWhenScoreIsTied() {
+        Card playerCard = new Card(5,Card.Suit.CLUBS, Card.Value.FIVE);
+        Card playerSecretCard = new Card(6,Card.Suit.CLUBS,Card.Value.SIX);
+        BlackjackHand playerHand = new BlackjackHand(playerSecretCard,playerCard);
+
+        Card dealerCard = new Card(5,Card.Suit.HEARTS, Card.Value.FIVE);
+        Card dealerSecretCard = new Card(6,Card.Suit.HEARTS,Card.Value.SIX);
+        BlackjackHand dealerHand = new BlackjackHand(dealerSecretCard,dealerCard);
+
+        assertThat("Dealer Wins",winningHand(playerHand,dealerHand),is(dealerHand));
+    }
+
+
 }
