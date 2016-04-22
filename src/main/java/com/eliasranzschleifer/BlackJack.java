@@ -103,7 +103,7 @@ public class BlackJack implements Game {
             winningHand = playerHand;
         } else if(playerScore > dealerScore && !playerIsBust) {
             winningHand = playerHand;
-        } else if(playerScore < dealerScore && dealerIsBust){
+        } else if(playerScore < dealerScore && dealerIsBust && !playerIsBust){
             winningHand = playerHand;
         }
         return winningHand;
