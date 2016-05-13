@@ -34,7 +34,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="blackjackv2" target="1.8" />
-      <module name="Cardgame" target="1.8" />
+      <module name="Cardgame" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

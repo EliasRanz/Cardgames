@@ -21,7 +21,12 @@ class GUI extends JFrame {
     private void gameMenu() {
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(new GridLayout(3,3));
-        exitButton.addActionListener(e -> System.exit(0));
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
         frame.add(blackjackButton);
         frame.add(exitButton);
         frame.pack();
