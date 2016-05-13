@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class CardGame {
     public static void main(String[] args) {
-        // GUI gui = new GUI(300,200);
+//        GUI gui = new GUI(15,15);
         Scanner input = new Scanner(System.in);
-        String gameChoice = null;
+        String gameChoice;
 
 
         System.out.println("What game would you like to play?\nBlackjack (b) ");

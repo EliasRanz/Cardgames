@@ -4,35 +4,29 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class GUI extends JFrame {
+class GUI extends JFrame {
     private final JFrame frame = new JFrame();
-    private final int uiHeight,uiWidth;
-    private final JButton exitButton = new JButton();
-    private final JPanel panel = new JPanel();
+    private final int uiHeight, uiWidth;
+    private final JButton exitButton = new JButton("Exit");
+    private final JButton blackjackButton = new JButton("Blackjack");
+    private String getGameChoice;
 
-    public GUI(int width,int height) {
+    GUI(int width, int height) {
         this.uiHeight = height;
         this.uiWidth = width;
-        initUI();
+        gameMenu();
     }
 
-    private final void initUI() {
-        this.setTitle("Card Game");
-        this.setLocationRelativeTo(null);
-        this.setSize(uiWidth,uiHeight);
-        this.getContentPane().add(panel);
-        this.setVisible(true);
-        panel.setLayout(null);
 
-        exitButton.setText("Exit");
-        exitButton.setBounds(90,100,80,30);
-        exitButton.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-        panel.add(exitButton);
-        frame.setLocationRelativeTo(null);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    private void gameMenu() {
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.getContentPane().setLayout(new GridLayout(3,3));
+        exitButton.addActionListener(e -> System.exit(0));
+        frame.add(blackjackButton);
+        frame.add(exitButton);
+        frame.pack();
+        frame.setVisible(true);
     }
+
+
 }
