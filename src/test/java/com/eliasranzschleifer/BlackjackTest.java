@@ -112,5 +112,20 @@ public class BlackjackTest {
 
     }
 
+    @Test
+    public void aceScoringTest() {
+        Card playerCard = new Card(1,Card.Suit.CLUBS, Card.Value.ACE);
+        Card playerSecretCard = new Card(1,Card.Suit.HEARTS, Card.Value.ACE);
+        BlackjackHand playerHand = new BlackjackHand(playerSecretCard,playerCard);
+        Card playerPublicCard = new Card(3,Card.Suit.CLUBS,Card.Value.THREE);
+        playerHand.dealCard(playerPublicCard);
+
+        Card dealerCard = new Card(3,Card.Suit.HEARTS, Card.Value.THREE);
+        Card dealerSecretCard = new Card(10,Card.Suit.HEARTS,Card.Value.TEN);
+        BlackjackHand dealerHand = new BlackjackHand(dealerSecretCard,dealerCard);
+
+        assertThat("Player Wins",winningHand(playerHand,dealerHand),is(playerHand));
+    }
+
 
 }

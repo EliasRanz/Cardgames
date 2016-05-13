@@ -1,6 +1,16 @@
 package com.eliasranzschleifer;
+import com.eliasranzschleifer.tree.BinaryTreeNode;
+import com.eliasranzschleifer.tree.BlackJackBinaryTree;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Sets;
+
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import static com.google.common.collect.Lists.newArrayList;
+
 /**
 * Created by ddceliasr on 4/8/16.
 */
@@ -19,14 +29,42 @@ public class BlackjackHand {
     }
 
     public int score(boolean isPlayersHand) {
-        int score = 0;
+        Set<Card> cards = new HashSet<>();
         if (isPlayersHand) {
-            score += secretCard.getWeight();
+            cards.add(secretCard);
         }
 
-        for (Card publicCard : publicCards) {
-            score += publicCard.getWeight();
+        cards.addAll(publicCards);
+        Set<Card> aces = Sets.filter(cards, new Predicate<Card>() {
+            @Override
+            public boolean apply(Card card) {
+                return card.getValue() == Card.Value.ACE;
+            }
+        });
+        Set<Card> notAces = Sets.difference(cards, aces);
+        int nonAceScore = 0;
+        for (Card notAce : notAces) {
+            nonAceScore += notAce.getWeight();
         }
+        BlackJackBinaryTree tree = new BlackJackBinaryTree(nonAceScore);
+        for (Card ace : aces) {
+            for (BinaryTreeNode<Integer> node : tree.getLeaves()) {
+                BinaryTreeNode<Integer> leftNode = new BinaryTreeNode<>();
+                leftNode.setData(node.getData() + 1);
+                node.setLeftNode(leftNode);
+
+                BinaryTreeNode<Integer> rightNode = new BinaryTreeNode<>();
+                rightNode.setData(node.getData() + 11);
+                node.setRightNode(rightNode);
+            }
+        }
+        int score = nonAceScore;
+        for (BinaryTreeNode<Integer> leaf : tree.getLeaves()) {
+            if(leaf.getData() != null && leaf.getData() <= 21 && leaf.getData() > score) {
+                score = leaf.getData();
+            }
+        }
+
         return score;
     }
 
