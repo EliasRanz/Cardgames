@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb12a1c8-c90e-42c6-9abc-90699941c83e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/tree/BinaryTreeNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/tree/BlackJackBinaryTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/eliasranzschleifer/BlackjackHand.class" afterPath="$PROJECT_DIR$/target/classes/com/eliasranzschleifer/BlackjackHand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/eliasranzschleifer/BlackjackTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/eliasranzschleifer/BlackjackTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cardgame.iml" afterPath="$PROJECT_DIR$/Cardgame.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/BlackjackHand.java" afterPath="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/BlackjackHand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/eliasranzschleifer/BlackjackTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/eliasranzschleifer/BlackjackTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/eliasranzschleifer/AppTest.java" afterPath="" />
     </list>
     <ignored path="blackjackv2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -139,8 +129,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/tree/BinaryTree.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/eliasranzschleifer/BlackjackTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/tree/BinaryTreeNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/tree/BlackJackBinaryTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/BlackjackHand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/eliasranzschleifer/tree/BlackJackBinaryTree.java" />
       </list>
     </option>
   </component>
@@ -1076,7 +1066,7 @@
       <workItem from="1461704899185" duration="101000" />
       <workItem from="1461872033851" duration="2574000" />
       <workItem from="1462297431185" duration="11416000" />
-      <workItem from="1463103627096" duration="227000" />
+      <workItem from="1463103627096" duration="414000" />
     </task>
     <servers />
   </component>
@@ -1113,11 +1103,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57767000" />
+    <option name="totallyTimeSpent" value="57954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1127,7 +1117,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2752881" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2752881" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1466,13 +1456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/eliasranzschleifer/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1566,6 +1549,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="47" column="96" selection-start-line="47" selection-start-column="96" selection-end-line="47" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/eliasranzschleifer/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="27" />
           <folding />
         </state>
       </provider>
